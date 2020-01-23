@@ -19,7 +19,9 @@
 				\hypertarget{search:newspaper-stand}{}
 				\subsubsection*{신문 가판대}
 					\begin{spoiler}[search:news]{신문}{[튜토리얼:조사대상]}
-						\entry[\hline]{content...}
+						\entry[\hline\hline]{인근 마을들에 도둑이 들었다는 소식이 신문 1면에 대서특필 되어 있습니다.}
+						
+						\entry[\hline]{\textbf{누군가가 이단심판관(외부인)을 의심할 때 공개}: \hyperlink{search:rogue-bag}{이단심판관의 가방}을 이제 조사할 수 있습니다.}
 					\end{spoiler}
 				
 				\hypertarget{search:rogue-bag}{}
@@ -27,15 +29,19 @@
 					이 가방은 이단심판관이 항상 들고 다니는 가방입니다. 누군가가 이단심판관을 의심하기 시작할 때에야 조사할 수 있도록 해 주세요.
 					
 					\begin{spoiler}[search:villager-identifications]{신분 증명서 더미}{[튜토리얼:조사대상]}
-						\entry[\hline]{content...}
+						\entry[\hline]{이단 심판관 증명서와 함께, 다른 세 명의 신분 증명서 요약본이 들어 있습니다.}
 					\end{spoiler}
 					
 					\begin{spoiler}[search:files]{서류철}{[튜토리얼:조사대상]}
-						\entry[\hline]{content...}
+						\entry{[정화의 노래]에 관련된 정보가 정리된 서류철입니다. 이 문장이 특히 눈에 띄는군요.}
+						
+						\flavour[\hline]{순수한 영혼만이 이 노래를 통해 세계를 정화할 수 있다고 전해진다.}
 					\end{spoiler}
 					
 					\begin{spoiler}[search:strange-bag]{수상한 주머니}{[튜토리얼:조사대상]}
-						\entry[\hline]{content...}
+						\entry[\hline\hline]{주머니를 열어보면 도둑들이나 들고 다닐만한 단도와 락픽이 잔뜩 들어있습니다.}
+						
+						\entry[\hline]{\textbf{이단심판관에게만 전달}: 이단심판관의 칭호 \storyref{rogue:hurt}{부상당한}이 제거되고, 언제든지 본인이 도둑이라는 진실을 밝히며 \storyref{rogue:dagger}{단도 투척}과 \storyref{rogue:lockpick}{자물쇠 따기}를 얻습니다.}
 					\end{spoiler}
 				
 			\subsection{마을 내부}
@@ -80,23 +86,38 @@
 				
 				\hypertarget{search:choir-leader}{}
 				\subsubsection*{성가단장의 집}
-					\begin{spoiler}[search:diary]{일기장}{[튜토리얼:조사대상]}
-						\entry[\hline]{content...}
+					\begin{spoiler}[search:diary]{책장}{[튜토리얼:조사대상]}
+						\entry[\hline\hline]{이 책장에 있는 사용할 수 있을 만한 정보를 한 가지 얻는 데에 10분이 소요됩니다. 얻겠다고 선언한다면, 아래 정보 중 무작위 정보를 전달해주세요. 1df를 굴려, +/0/-가 나올때마다 서로 다른 정보를 주고, 중복되는 정보를 줘야 할 때 마다 이미 아는 정보라는 사실을 전달해주는 것을 추천합니다.}
+						
+						\entry[\hline\hline]{\textbf{일기장}: 성가단원 꼬맹이는 입양아입니다. 아기 때에 풀숲 안에 숨겨져 있던 아기를 찾아 데리고 와서 키우고 있죠.}
+						
+						\entry[\hline\hline]{\textbf{음악 연습 기록지}: 이 마을에 과거에 살던 천재적인 음악가가 작곡한 전설의 노래가 있다고 성기사가 당신에게 얘기해주었습니다. 최근, 성기사가 이 노래로 추정되는 곡을 어떻게인지 찾아왔군요.}
+						
+						\entry[\hline]{\textbf{오래된 책}: 순수한 영혼에 대한 과거의 연구 자료가 있습니다. 순수한 영혼의 피끼리는 서로 섞인다는 말이 적혀 있군요.}
 					\end{spoiler}
 				
 				\hypertarget{search:paladin}{}
 				\subsubsection*{성기사의 집}
+					\storyref{search:shovel}{흙이 묻은 삽}은 성기사의 집을 나서려고 할 때 현관문 뒤에 서 있는 것을 발견하도록 하는 것을 권장합니다.
 					
 					\begin{spoiler}[search:paladin-shield]{낡은 방패}{[튜토리얼:조사대상]}
-						\entry[\hline]{content...}
+						\entry[\hline]{손잡이 부분에 다음이 숨겨져 있습니다:
+							\begin{spoiler}{흑마법사의 피}{[타락]}
+								\entry[\hline]{인접한 구역에 이 피를 흩뿌릴 수 있다. 다음 두 턴 동안, 좀비는 반드시 해당 칸을 향해서 이동하며, 공격하지 않는다.}
+							\end{spoiler}
+						}
 					\end{spoiler}
 					
 					\begin{spoiler}[search:paladin-cross]{십자가}{[튜토리얼:조사대상]}
-						\entry[\hline]{content...}
+						\entry[\hline]{내부에 다음이 숨겨져 있습니다:
+							\begin{spoiler}{순수한 피}{[신성]}
+								\flavour[\hline]{순수한 인간의 피입니다. 과거, 성기사는 이 사람을 지키는 데에 실패했습니다.}
+							\end{spoiler}
+						}
 					\end{spoiler}
 					
 					\begin{spoiler}[search:shovel]{흙이 묻은 삽}{[튜토리얼:조사대상]}
-						\entry[\hline]{content...}
+						\flavour[\hline]{젖어있는 흙이 묻은 삽입니다.}
 					\end{spoiler}
 				
 			\subsection{교회}
