@@ -11,12 +11,44 @@
 			\entry{노래를 부르거나 악기를 연주하여 음악을 통해 마법을 사용할 수 있다. 아래 노래들을 사용할 수 있다.}
 			
 			\entry{
-				\begin{spoiler}{성가}{[노래]}
+				\begin{spoiler}[music:holy]{성가}{[노래]}
 					\entry[\hline]{한 턴에 이 노래를 부르기로 선택한다면 이동을 제외한 다른 행동을 할 수 없다. 턴이 종료될 때, 같은 구역에 있는 모든 생명체의 체력을 1 회복하고, 언데드에게 [신성] 피해를 1 준다.}
 				\end{spoiler}
 			}
 			
 			\entry[\hline]{\statchange{+}{지식:음악[2]}}
+		\end{spoiler}
+	
+	\subsection*{직업 퀘스트}
+		\begin{spoiler}{성가단원}{[직업]}
+			\entry{\statchange{+}{지식:음악[2], 제작:음악[2]}}
+			
+			\entry{\begin{spoiler}{축복}{[퀘스트]}
+				
+				\entry{\textbf{성공 조건}
+				
+				칭호 \storyref{bard:cursed}{저주받은} 제거}
+				
+				\entry[\hline]{\textbf{보상}
+				
+				\statchange{+}{지식:신성}
+				
+				\storyref{music:holy}{성가}의 회복량이 1 증가하고, 언데드에게 [신성] 피해를 주는 대신 인접한 구역으로 밀쳐내며 [기절: 1턴] 상태에 빠트릴 수 있다.}
+			
+			\end{spoiler}}
+			
+			\entry[\hline]{\begin{spoiler}{음악}{[퀘스트]}
+					\entry{\textbf{성공 조건}
+					
+					성가단의 연습 장소에 있는 악보를 정리한다.}
+					
+					\entry[\hline]{\textbf{보상}
+					
+					해당 악보의 음악 중 최대 한 곡을 추가로 기억할 수 있다.
+					
+					그 이외의 곡들은 악보를 직접 소유하고 있다면 연주하거나 노래할 수 있다.}
+				
+			\end{spoiler}}
 		\end{spoiler}
 	
 	\subsection*{획득 가능한 이야기}
@@ -27,8 +59,4 @@
 			
 			\entry[\hline]{\textbf{제거 조건}: 특정 아이템을 소유하고 있는 동안, 또는 어떤 사실을 알게 되면 이 칭호를 무시한다. 이 시점은 시스템이 알려준다.}
 		\end{spoiler}
-	
-	\bigskip
-	
-	\storyref{choir:bard}{성가대}로 사용할 수 있는 더 많은 노래는 성가단의 연습장소에 있는 악보들으로 알 수 있습니다. 최대 한 곡을 추가로 기억할 수 있고, 그 이상을 기억하기 위해서는 악보를 직접 소유하고 있어야만 합니다.
 \end{document}
