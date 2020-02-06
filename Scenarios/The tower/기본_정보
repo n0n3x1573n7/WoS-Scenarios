@@ -1,7 +1,7 @@
 \documentclass{report}
 
 \begin{document}
-  \textbf{시나리오 이름}: 나갈 수 없는 탑
+	\textbf{시나리오 이름}: 나갈 수 없는 탑
 	
 	\textbf{시나리오 작가}: 소낙(\href{https://twitter.com/knock_tr}{@knock\_tr})
 	
