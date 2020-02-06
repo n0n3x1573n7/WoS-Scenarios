@@ -1,0 +1,17 @@
+\documentclass{report}
+
+\begin{document}
+  \textbf{시나리오 이름}: 나갈 수 없는 탑
+	
+	\textbf{시나리오 작가}: 소낙(\href{https://twitter.com/knock_tr}{@knock\_tr})
+	
+	\textbf{권장 인원}: 1인
+	
+	\textbf{트리거 워닝}: (추가 예정)
+	
+	\textbf{시놉시스}
+	
+	이야기꾼은 어떤 마법사의 제자 역할이 되어 마법사의 탑에 들어가게 됩니다.
+  
+  마법사의 일을 돕는 척 하며 마법사의 탑에 숨겨진 마석을 찾아야 합니다.
+\end{document}
