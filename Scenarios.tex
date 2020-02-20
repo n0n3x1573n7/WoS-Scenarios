@@ -110,6 +110,25 @@ version={4.0},
 	\setlength\parskip{0pt}%
 	\par\centering}{\par\noindent\ignorespacesafterend}
 
+%environment for WoT(lite) stories, appears on index
+\newenvironment{lite}[2][]
+{ \ignorespaces \smallbreak \par
+	\noindent
+	\begin{minipage}{\linewidth}
+		\begin{tightcenter}
+			{\large \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}\\[1ex]
+			\index{#2}
+			\tabular{|p{\widthratio\linewidth}|}
+			\hline
+		}
+		{
+			\endtabular
+		\end{tightcenter}
+	\end{minipage}
+	\par
+	\smallbreak
+}
+
 %environment for normal stories, appears on index
 \newenvironment{story}[3][]
 { \ignorespaces \smallbreak \par
@@ -117,14 +136,14 @@ version={4.0},
 	\begin{minipage}{\linewidth}
 		\begin{tightcenter}
 			{\large \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}\\[1ex]
+			\index{#2}
 			\tabular{|p{\widthratio\linewidth}|}
-				\hline
-				\textbf{속성}: #3
-				\index{#2}
-				\\\hline
-				\ignorespaces\unskip
-				}
-				{
+			\hline
+			\textbf{속성}: #3
+			\\\hline
+			\ignorespaces\unskip
+		}
+		{
 			\endtabular
 		\end{tightcenter}
 	\end{minipage}
@@ -140,12 +159,12 @@ version={4.0},
 		\begin{tightcenter}
 			{\large \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}\\[1ex]
 			\tabular{|p{\widthratio\linewidth}|}
-				\hline
-				\textbf{속성}: #3
-				\\\hline
-				\ignorespaces\unskip
-				}
-				{
+			\hline
+			\textbf{속성}: #3
+			\\\hline
+			\ignorespaces\unskip
+		}
+		{
 			\endtabular
 		\end{tightcenter}
 	\end{minipage}
@@ -251,9 +270,9 @@ version={4.0},
 	\part{살아 있지 못한 마을(The Unliving)}
 	\label{endof_MoT}
 		\input{./Scenarios/Unliving.tex}
-	\label{endof_Unliving}
 	
 	\part{나갈 수 없는 탑(Tower)}
+		\label{endof_Unliving}
 		\input{./Scenarios/Tower.tex}
 	\label{endof_Tower}
 	
