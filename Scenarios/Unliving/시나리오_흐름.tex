@@ -110,7 +110,7 @@
 							\begin{spoiler}[paladin-cross:pure-blood]{순수한 피}{[신성]}
 								\flavour{순수한 인간의 피입니다. 과거, 성기사는 이 사람을 지키는 데에 실패했습니다.}
 								
-								\entry[\hline]{자신이 있거나 인접한 구역에 이 피를 흩뿌릴 수 있다. 해당 구역의 모든 좀비는 영구히 행동을 멈춘다.}
+								\entry[\hline]{자신이 있거나 인접한 구역에 이 피를 흩뿌릴 수 있다. 해당 구역의 모든 좀비는 비활성화되어, 해당 씬동안 행동을 멈춘다.}
 							\end{spoiler}
 						}
 					\end{spoiler}
@@ -210,7 +210,7 @@
 								
 								\entry[\hline]{
 									\begin{spoiler}[search:pentagram-note]{오각별이 그려진 책}{[튜토리얼:조사대상]}
-										\entry[\hline]{[타락의 노래]라는 제목의 악보입니다. 엄청나게 두꺼워, 연주하는데에 적게 잡아도 여섯시간정도는 걸릴 것 같습니다.}
+										\entry[\hline]{[타락의 노래]라는 제목의 악보입니다. 엄청나게 두꺼워, 연주하는데에 적게 잡아도 대여섯시간정도는 걸릴 것 같습니다.}
 									\end{spoiler}
 								}
 							\end{spoiler}}
@@ -236,11 +236,13 @@
 				\cline{4-5}
 				&                         &   & \multicolumn{2}{c|}{제대} &                       &                       &                       \\ \hline
 				\multicolumn{1}{|c|}{} & \multicolumn{2}{c|}{좌측 오르간} &            &            & \multicolumn{2}{c|}{우측 오르간}                   & \multicolumn{1}{c|}{} \\ \hline
+				\multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{}   &   & \multicolumn{1}{c|}{}	          & \multicolumn{1}{c|}{}	& \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \hline
 				\multicolumn{1}{|c|}{} & \multicolumn{2}{c|}{의자 1}   &            &            & \multicolumn{2}{c|}{의자 2}                     & \multicolumn{1}{c|}{} \\ \hline
 				\multicolumn{1}{|c|}{} & \multicolumn{2}{c|}{의자 3}   &            &            & \multicolumn{2}{c|}{의자 4}                     & \multicolumn{1}{c|}{} \\ \hline
 				\multicolumn{1}{|c|}{} & \multicolumn{2}{c|}{의자 5}   &            &            & \multicolumn{2}{c|}{의자 6}                     & \multicolumn{1}{c|}{} \\ \hline
 				\multicolumn{1}{|c|}{} & \multicolumn{2}{c|}{의자 7}   &            &            & \multicolumn{2}{c|}{의자 8}                     & \multicolumn{1}{c|}{} \\ \hline
 				\multicolumn{1}{|c|}{} & \multicolumn{2}{c|}{의자 9}   &            &            & \multicolumn{2}{c|}{의자 (1)0}                     & \multicolumn{1}{c|}{} \\ \hline
+				\multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{}   &   & \multicolumn{1}{c|}{}	          & \multicolumn{1}{c|}{}	& \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \hline
 				\multicolumn{1}{|c|}{} & \multicolumn{1}{c|}{}   &   & \multicolumn{2}{c|}{입구}	          & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} & \multicolumn{1}{c|}{} \\ \hline
 			\end{tabular}
 		\end{center}
@@ -258,6 +260,8 @@
 		\end{spoiler}
 		
 		\begin{spoiler}{오르간}{[물체][음악]}
+			\entry{마을에 맞지 않게, 매우 큰 파이프 오르간이다. 두 명까지도 앉아서 동시에 연주할 수 있다.}
+			
 			\entry[\hline]{오르간에서 연주된 음악의 효과는 예배당 전체에 영향을 끼친다.}
 		\end{spoiler}
 		
@@ -265,14 +269,14 @@
 		
 		이야기꾼들은 입구칸 중 원하는 칸에서 시작합니다. 이야기꾼이나 흑막이 아닌 등장인물은 시스템의 가호를 받지 못해 좀비로 변화합니다.
 		
-		좀비는 최초에는 7시로부터 지난 시간 1시간당 두 개체씩, 최대 10개체까지 서로 \emph{다른} 의자에서 일어난 채로 시작합니다. 좀비가 어디서 시작하는지는 d10을 사용해 결정합니다. 이 이야기의 각 항목들은 해당 내용이 적용될 때 공개합니다.
+		좀비는 최초에는 7시로부터 지난 시간 1시간당 두 개체씩, 최대 10개체까지 의자에서 일어난 채로 시작합니다. 좀비는 가장 앞줄로부터 시작해서 일어납니다. 이 이야기의 각 항목들은 해당 내용이 적용될 때 공개합니다.
 		
 		\begin{spoiler}[zombie:fallen]{타락의 손길}{[좀비]}
 			\entry{좀비의 턴에, \storyref{priest:fallen-song}{타락의 연주자}의 노래가 지속된다면, 좀비는 가장 가까이에 있는 이야기꾼을 향해 한 칸 이동한다.}
 			
 			\entry{\storyref{priest:fallen-song}{타락의 연주자}의 노래가 지속되는 동안, 좀비와 같은 칸에서 턴을 끝내는 이야기꾼은 좀비 하나당 체력과 정신력을 합쳐서 3 잃거나, 개연성을 1 잃는다. 이는 물리적인 공격이 아니고 타락으로 인한 오염으로, 방지되거나 회피될 수 없다.}
 			
-			\entry[\hline]{턴을 시작할 때에 같은 칸에 있는 좀비의 수를 본인을 포함한 이야기꾼의 수로 나눈 수가 이야기꾼의 [근력] 또는 [기민] 중 높은 수치의 두 배 초과인 경우, 이야기꾼은 이동할 수 없다. 좀비가 없을 때에는 언제든지 이동할 수 있다.}
+			\entry[\hline]{턴을 시작할 때에 같은 칸에 있는 좀비의 수를 본인을 포함한 이야기꾼의 수로 나눈 수(소숫점 아래 버림)가 이야기꾼의 [근력] 또는 [기민] 중 높은 수치의 두 배 초과인 경우, 이야기꾼은 이동할 수 없다. 좀비가 없을 때에는 언제든지 이동할 수 있다.}
 		\end{spoiler}
 		
 		이 상황을 타개할 수 있는 방법은 두 가지입니다:
