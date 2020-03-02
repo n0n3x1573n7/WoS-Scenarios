@@ -25,6 +25,8 @@
 
 \usepackage{fontspec}
 \setmainfont[ItalicFont={*},ItalicFeatures={FakeSlant=.167}]{NanumBarunGothic}
+\newfontfamily\storyfont{SDMiSaeng.ttf}
+
 \usepackage[hidelinks,unicode,bookmarks=true]{hyperref}
 \usepackage[usenames,dvipsnames]{color}
 \usepackage[round]{natbib}
@@ -216,7 +218,6 @@ version={4.0},
 	\entry[#1]{\textbf{트리거}\ifthenelse{\isempty{#2}}{}{\textbf{(#2)}}: #3\\\textbf{효과}: #4}
 }
 
-\newfontfamily\storyfont{Nanum Pen Script}
 \newcommand{\flavour}[2][\basesepline]
 {
 	\entry[#1]{{\storyfont\large#2}}
