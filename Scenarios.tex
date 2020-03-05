@@ -131,6 +131,24 @@ version={4.0},
 	\smallbreak
 }
 
+%environment for WoT(lite) stories, appears on index
+\newenvironment{spoil}[2][]
+{ \ignorespaces \smallbreak \par
+	\noindent
+	\begin{minipage}{\linewidth}
+		\begin{tightcenter}
+			{\large \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}\\[1ex]
+			\tabular{|p{\widthratio\linewidth}|}
+			\hline
+		}
+		{
+			\endtabular
+		\end{tightcenter}
+	\end{minipage}
+	\par
+	\smallbreak
+}
+
 %environment for normal stories, appears on index
 \newenvironment{story}[3][]
 { \ignorespaces \smallbreak \par
@@ -198,6 +216,26 @@ version={4.0},
 	\ignorespaces#2\ignorespaces\unskip\\#1
 }
 
+\newcommand{\subject}[2][\basesepline]
+{
+	\entry[#1]{\makecell{\centering \textbf{#2}}}
+}
+
+\newcommand{\positive}[2][\basesepline]
+{
+	\entry[#1]{\textbf{긍정적}: #2}
+}
+
+\newcommand{\negative}[2][\basesepline]
+{
+	\entry[#1]{\textbf{부정적}: #2}
+}
+
+\newcommand{\neutral}[2][\basesepline]
+{
+	\entry[#1]{\textbf{중립적}: #2}
+}
+
 \newcommand{\pre}[2][\basesepline]
 {
 	\entry[#1]{\textbf{필요 조건}: \textit{#2}}
@@ -254,7 +292,6 @@ version={4.0},
 \date{}
 
 \begin{document}
-	%original: https://docs.google.com/document/d/1CewodUdP8zI3f81ktz6iiZYG4b1cFzARG2g1HFeswzg/edit
 	\maketitle
 	
 	\setcounter{tocdepth}{-1}
@@ -276,6 +313,9 @@ version={4.0},
 		\label{endof_Tower}
 		\input{./Scenarios/Unliving.tex}
 	
-	\label{endof_Unliving}
+	\part{핏빛 안개(The Bloody Mist)}
+		\label{endof_Unliving}
+		\input{./Scenarios/Bloody.tex}
 	
+	\label{endof_Bloody}
 \end{document}
