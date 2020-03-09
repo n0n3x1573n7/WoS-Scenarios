@@ -84,6 +84,7 @@ version={4.0},
 \usepackage{chngcntr}
 \counterwithin*{chapter}{part}
 
+
 \usepackage{setspace}
 \renewcommand{\baselinestretch}{1.2}
 
@@ -104,92 +105,56 @@ version={4.0},
 \setlength\dashlinegap{2.0pt}
 \setlength\arrayrulewidth{0.3pt}
 \newcommand{\basesepline}{\hdashline}
+\renewcommand{\hline}{\tabularnewline}
 
 \newcommand{\widthratio}{0.975}
 
 \newenvironment{tightcenter}{%
 	\setlength\topsep{0pt}%
 	\setlength\parskip{0pt}%
-	\par\centering}{\par\noindent\ignorespacesafterend}
+	\par\centering}{\par\smallskip\noindent\ignorespacesafterend}
+
+\usepackage{colortbl}
+\usepackage[breakable]{tcolorbox}
+\usepackage{longtable}
+
+\makeatletter
+\tcbset{
+	tabular/.style={
+		boxsep=\z@,top=\z@,bottom=\z@,leftupper=\z@,rightupper=\z@,
+		toptitle=1mm,bottomtitle=1mm,boxrule=0.5mm,
+		before upper={\def\arraystretch{1.1}\tcb@hack@currenvir\tabular{#1}},
+		after upper=\endtabular\arrayrulecolor{black}},
+}
+\makeatother
 
 %environment for WoT(lite) stories, appears on index
 \newenvironment{lite}[2][]
-{ \ignorespaces \smallbreak \par
+{ \ignorespaces \par
 	\noindent
-	\begin{minipage}{\linewidth}
-		\begin{tightcenter}
-			{\large \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}\\[1ex]
-			\index{#2}
-			\tabular{|p{\widthratio\linewidth}|}
-			\hline
+	\begin{tightcenter}
+		\begin{tcolorbox}[standard jigsaw, opacityback=0, colframe=black!75!black, width=\linewidth, breakable=unlimited, tabular={|p{\widthratio\linewidth}|}, title={\large \centering \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}]
 		}
 		{
-			\endtabular
-		\end{tightcenter}
-	\end{minipage}
+		\end{tcolorbox}
+	\end{tightcenter}
 	\par
-	\smallbreak
-}
-
-%environment for WoT(lite) stories, appears on index
-\newenvironment{spoil}[2][]
-{ \ignorespaces \smallbreak \par
-	\noindent
-	\begin{minipage}{\linewidth}
-		\begin{tightcenter}
-			{\large \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}\\[1ex]
-			\tabular{|p{\widthratio\linewidth}|}
-			\hline
-		}
-		{
-			\endtabular
-		\end{tightcenter}
-	\end{minipage}
-	\par
-	\smallbreak
 }
 
 %environment for normal stories, appears on index
 \newenvironment{story}[3][]
-{ \ignorespaces \smallbreak \par
+{ \ignorespaces \par
 	\noindent
-	\begin{minipage}{\linewidth}
-		\begin{tightcenter}
-			{\large \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}\\[1ex]
-			\index{#2}
-			\tabular{|p{\widthratio\linewidth}|}
-			\hline
+	\begin{tightcenter}
+		\begin{tcolorbox}[standard jigsaw, opacityback=0, colframe=black!75!black, width=\linewidth, breakable, tabular={|p{\widthratio\linewidth}|}, title={\large \centering \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}]
 			\textbf{속성}: #3
 			\\\hline
 			\ignorespaces\unskip
 		}
 		{
-			\endtabular
-		\end{tightcenter}
-	\end{minipage}
+		\end{tcolorbox}
+	\end{tightcenter}
 	\par
-	\smallbreak
-}
-
-%environment for spoiling stories(i.e. scenarios), does not appear on index
-\newenvironment{spoiler}[3][]
-{ \ignorespaces \smallbreak \par
-	\noindent
-	\begin{minipage}{\linewidth}
-		\begin{tightcenter}
-			{\large \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}\\[1ex]
-			\tabular{|p{\widthratio\linewidth}|}
-			\hline
-			\textbf{속성}: #3
-			\\\hline
-			\ignorespaces\unskip
-		}
-		{
-			\endtabular
-		\end{tightcenter}
-	\end{minipage}
-	\par
-	\smallbreak
 }
 
 \newcommand{\storyref}[2]{\hyperlink{#1}{\textnormal{[#2]}}}
@@ -258,10 +223,10 @@ version={4.0},
 
 \newcommand{\flavour}[2][\basesepline]
 {
-	\entry[#1]{{\storyfont\large#2}}
+	\entry[#1]{{\storyfont\Large#2}}
 }
 
-\newcommand{\world}[1]{{\storyfont \large #1 \par}}
+\newcommand{\world}[1]{{\storyfont\Large#1\par}}
 
 \setlength\parindent{0pt}
 
