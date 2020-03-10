@@ -14,7 +14,7 @@
 		구역을 넘어갈 때 소요되는 30분을 전투로 대체합니다. 이 경우, 다음 구역으로 넘어가는 길을 다음과 같이 4 $\times$ 7의 구역으로 표현합니다:
 		
 		\begin{center}
-			\begin{tabular}{|c|c|c|c|c|c|c|}
+			\begin{tabular}{!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}}
 				\hline
 				이 & 01 & 02 & 03 & 04 & 05 & 도 \\\hline
 				야 & 06 & 07 & 08 & 09 & 10 & 착 \\\hline
@@ -33,7 +33,7 @@
 		
 		좀비의 턴에는, \storyref{zombie:anger-aroused}{점점 격렬해지는 분노}의 ``시간이 지날수록 공격성이 강해진다"는 문구에 따라, 전투가 시작할 때 [기본] 항목만큼의 좀비가 소환되어, 턴이 시작할 때 [좀비 스폰] 수에 따라 좀비를 소환하고, [공격성] 규칙에 따라 공격하고 이동합니다.
 		
-		\begin{tabularx}{\linewidth}{c|c|l|X}
+		\begin{tabularx}{\linewidth}{c!{\color{black}\vrule}c!{\color{black}\vrule}l!{\color{black}\vrule}X}
 			\makecell{\centering\textbf{시간}} & \textbf{기본} & \makecell{\centering\textbf{좀비 스폰}} & \makecell{\centering\textbf{공격성}}\\\hline\hline
 			6시\textasciitilde8시 & 0 & 좀비 한 구 & 좀비를 마지막으로 공격한 사람 쪽으로 이동합니다. 좀비를 공격하지 않는다면, 이동하지 않습니다. \\\hline
 			8시\textasciitilde10시 & 2 & 좀비 두 구 & 좀비를 마지막으로 공격한 사람 쪽으로 이동합니다. 좀비를 공격하지 않는다면, 무작위로 한 칸 이동합니다. \\\hline
