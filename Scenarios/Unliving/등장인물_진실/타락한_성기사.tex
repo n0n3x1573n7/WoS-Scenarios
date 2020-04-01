@@ -10,30 +10,30 @@
 		\begin{story}[paladin:fallen]{타락한}{[공포][칭호]}
 			\limitedtrauma{공포}{\storyref{paladin:smite}{신성한 일격}을 사용할 수 없다.}
 			
-			\entry[\hline]{\textbf{제거 조건}: 자신의 집 안에 있는 [순수한 피]를 마시거나, 특정한 음악을 듣는다.}
+			\entry{\textbf{제거 조건}: 자신의 집 안에 있는 [순수한 피]를 마시거나, 특정한 음악을 듣는다.}
 		\end{story}
 		
 		\begin{story}[paladin:smite]{신성한 일격}{[역할]}
-			\entry[\hline]{세 턴에 한 번 사용할 수 있다. 사거리에 상관 없이 대상을 정한다. 대상에게 [신성] 피해를 2 주고, [기절] 상태에 빠트린다. [기절] 상태의 상대는 다음 턴 모든 행동이 불가능하다.}
+			\entry{세 턴에 한 번 사용할 수 있다. 사거리에 상관 없이 대상을 정한다. 대상에게 [신성] 피해를 2 주고, [기절] 상태에 빠트린다. [기절] 상태의 상대는 다음 턴 모든 행동이 불가능하다.}
 		\end{story}
 	
 	\subsection*{획득 가능한 이야기}
 		\begin{story}[search:paladin-shield]{낡은 방패}{[튜토리얼:조사대상]}
-			\entry[\hline]{손잡이 부분에 숨겨진 유리병에 다음이 있습니다:
+			\entry{손잡이 부분에 숨겨진 유리병에 다음이 있습니다:
 				\begin{story}[paladin-shield:dark-blood]{흑마법사의 피}{[타락]}
 					\flavour{흑마법사의 피입니다. 과거, 성기사에 의해 처단되었습니다.}
 					
-					\entry[\hline]{자신이 있거나 인접한 구역에 이 피를 흩뿌릴 수 있다. 다음 턴에, 좀비는 이동하지 않는다고 하더라도 반드시 해당 칸을 향해서 이동하며, 공격하지 않는다.}
+					\entry{자신이 있거나 인접한 구역에 이 피를 흩뿌릴 수 있다. 다음 턴에, 좀비는 이동하지 않는다고 하더라도 반드시 해당 칸을 향해서 이동하며, 공격하지 않는다.}
 				\end{story}
 			}
 		\end{story}
 		
 		\begin{story}[search:paladin-cross]{십자가}{[튜토리얼:조사대상]}
-			\entry[\hline]{내부에 숨겨진 유리병에 다음이 있습니다:
+			\entry{내부에 숨겨진 유리병에 다음이 있습니다:
 				\begin{story}[paladin-cross:pure-blood]{순수한 피}{[신성]}
 					\flavour{순수한 인간의 피입니다. 과거, 성기사는 이 사람을 지키는 데에 실패했습니다.}
 					
-					\entry[\hline]{자신이 있거나 인접한 구역에 이 피를 흩뿌릴 수 있다. 해당 구역의 모든 좀비는 영구히 행동을 멈춘다.}
+					\entry{자신이 있거나 인접한 구역에 이 피를 흩뿌릴 수 있다. 해당 구역의 모든 좀비는 영구히 행동을 멈춘다.}
 				\end{story}
 			}
 		\end{story}
@@ -41,7 +41,7 @@
 		\begin{story}[paladin:protect]{권능의 보호막}{[신성]}
 			\pre{\storyref{paladin:fallen}{타락한} 칭호 제거, \storyref{search:paladin-shield}{낡은 방패} 장착}
 			
-			\entry[\hline]{세 턴에 한 번 사용할 수 있다. 다음 자신의 턴까지, 타락한 자들과 그 영향을 막아주는 방벽을 자신이 있는 구역에 칠 수 있다. 해당 칸에 있는 타락한 존재는 무작위 인접한 구역으로 밀려난다.}
+			\entry{세 턴에 한 번 사용할 수 있다. 다음 자신의 턴까지, 타락한 자들과 그 영향을 막아주는 방벽을 자신이 있는 구역에 칠 수 있다. 해당 칸에 있는 타락한 존재는 무작위 인접한 구역으로 밀려난다.}
 		\end{story}
 
 	\subsection*{직업 퀘스트}
@@ -54,19 +54,19 @@
 					
 					\storyref{paladin-cross:pure-blood}{순수한 피}를 얻는다.}
 				
-				\entry[\hline]{\textbf{보상}
+				\entry{\textbf{보상}
 					
 					\statchange{+}{지식:신성[2]}}
 				
 		\end{story}}
 		
-		\entry[\hline]{\begin{story}{타락한 지식}{[퀘스트]}
+		\entry{\begin{story}{타락한 지식}{[퀘스트]}
 				
 				\entry{\textbf{성공 조건}
 					
 					\storyref{paladin-shield:dark-blood}{흑마법사의 피}를 얻는다.}
 				
-				\entry[\hline]{\textbf{보상}
+				\entry{\textbf{보상}
 					
 					\statchange{+}{지식:흑마법[2]}}
 				
