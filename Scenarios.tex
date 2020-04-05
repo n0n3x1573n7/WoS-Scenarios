@@ -14,21 +14,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage[OT1, T2A]{fontenc}
 
-\usepackage{imakeidx}
-\indexsetup{othercode=\footnotesize}
-\makeindex[columns=3, title={이야기 찾아보기}]
-\let\oldindex\index
-\renewcommand*{\index}[1]{\oldindex{#1}\ignorespaces}
-\makeatletter
-\def\indexspace{}
-\makeatother
-
 \usepackage{fontspec}
 \setmainfont[ItalicFont={*},ItalicFeatures={FakeSlant=.167}]{NanumBarunGothic}
 \newfontfamily{\storyfont}[Scale=1.1]{SDMiSaeng.ttf}
 
 \usepackage[hidelinks,unicode,bookmarks=true]{hyperref}
 \usepackage[usenames,dvipsnames]{color}
+\usepackage[dvipsnames]{xcolor}
 \usepackage[round]{natbib}
 \hypersetup{colorlinks,
 	citecolor=Red,
