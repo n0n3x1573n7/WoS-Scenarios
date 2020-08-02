@@ -5,6 +5,12 @@
 \newif\ifDLC
 \DLCfalse %\DLCtrue or \DLCfalse
 
+\newif\ifpoison
+\poisontrue %\poisontrue or \poisonfalse
+
+\newif\ifrescue
+\rescuetrue %\rescuetrue or \rescuefalse
+
 \newif\iffullchangelog
 \fullchangelogfalse %\fullchangelogtrue or \fullchangelogfalse
 
@@ -256,21 +262,29 @@ version={4.0},
 	\tableofcontents
 	\part{시간의 박물관(Museum of Time)}
 		\input{./Scenarios/MoT.tex}
-		\label{endof_MoT}
+	\label{endof_MoT}
 	
 	\part{나갈 수 없는 탑}
 		\input{./Scenarios/Tower.tex}
-		\label{endof_Tower}
+	\label{endof_Tower}
 	
 	\part{살아 있지 못한 마을(The Unliving Village)}
 		\input{./Scenarios/Unliving.tex}
-		\label{endof_Unliving}
+	\label{endof_Unliving}
 	
 	\part{핏빛 안개(The Bloody Mist)}
 		\input{./Scenarios/Bloody.tex}
-		\label{endof_Bloody}
+	\label{endof_Bloody}
 	
+	\ifpoison
 	\part{이 잔에 독을 탔다}
 		\input{./Scenarios/Poison.tex}
-		\label{endof_Poison}
+	\fi
+	\label{endof_Poison}
+	
+	\ifrescue
+	\part{이야기꾼의 세계 캠페인}
+		\input{./Scenarios/Rescue.tex}
+	\fi
+	\label{endof_Rescue}
 \end{document}
