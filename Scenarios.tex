@@ -1,4 +1,4 @@
-	\documentclass[11pt]{report}
+\documentclass[11pt]{report}
 %Use \documentclass[12pt]{book} to printout and make it into a book
 \renewcommand{\numberline}[1]{#1~}
 
@@ -6,10 +6,13 @@
 \DLCfalse %\DLCtrue or \DLCfalse
 
 \newif\ifpoison
-\poisonfalse %\poisontrue or \poisonfalse
+\poisontrue %\poisontrue or \poisonfalse
 
 \newif\ifrescue
 \rescuefalse %\rescuetrue or \rescuefalse
+
+\newif\ifhouse
+\housetrue %\housetrue or \housefalse
 
 \newif\iffullchangelog
 \fullchangelogfalse %\fullchangelogtrue or \fullchangelogfalse
@@ -58,6 +61,7 @@
 \AfterEndEnvironment{itemize}{\vskip-\lastskip}
 
 \usepackage{multirow}
+\usepackage{multicol}
 \usepackage{ulem}
 \usepackage{bm}
 \usepackage{tikz}
@@ -123,6 +127,19 @@ version={4.0},
 	\noindent
 	\begin{tightcenter}
 		\begin{tcolorbox}[standard jigsaw, boxsep=0pt,left=0pt,right=0pt, opacityback=0, colframe=black!75!black, width=\widthratio\linewidth, breakable, title={\large \centering \ifthenelse{\isempty{#1}}{\textbf{[#2]}}{\hypertarget{#1}{\textbf{[#2]}}}}]
+		}
+		{
+		\end{tcolorbox}
+	\end{tightcenter}
+	\par
+}
+
+%environment for normal stories, appears on index
+\newenvironment{flow}[2][]
+{ \ignorespaces \par
+	\noindent
+	\begin{tightcenter}
+		\begin{tcolorbox}[standard jigsaw, boxsep=0pt,left=0pt,right=0pt, opacityback=0, colframe=black!75!black, width=\widthratio\linewidth, title={\large \centering \ifthenelse{\isempty{#1}}{\textbf{#2}}{\hypertarget{#1}{\textbf{#2}}}}]
 		}
 		{
 		\end{tcolorbox}
@@ -284,7 +301,13 @@ version={4.0},
 	
 	\ifrescue
 	\part{이야기꾼의 세계 캠페인}
-		\input{./Scenarios/Rescue.tex}
+	\input{./Scenarios/Rescue.tex}
 	\fi
 	\label{endof_Rescue}
+	
+	\ifhouse
+	\part{공포의 저택}
+	\input{./Scenarios/House.tex}
+	\fi
+	\label{endof_House}
 \end{document}
