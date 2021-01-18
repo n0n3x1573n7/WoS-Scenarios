@@ -3,19 +3,22 @@
 \renewcommand{\numberline}[1]{#1~}
 
 \newif\ifDLC
-\DLCfalse %\DLCtrue or \DLCfalse
+\DLCfalse
 
 \newif\ifpoison
-\poisontrue %\poisontrue or \poisonfalse
+\poisontrue
 
 \newif\ifrescue
-\rescuefalse %\rescuetrue or \rescuefalse
+\rescuefalse
 
 \newif\ifhouse
-\housetrue %\housetrue or \housefalse
+\housetrue
 
 \newif\iffullchangelog
-\fullchangelogfalse %\fullchangelogtrue or \fullchangelogfalse
+\fullchangelogfalse
+
+\newcommand{\wotcolor}{blue}
+\newcommand{\woscolor}{red}
 
 %\usepackage{kotex}
 \usepackage{CJKutf8}
@@ -134,7 +137,7 @@ version={4.0},
 	\par
 }
 
-%environment for normal stories, appears on index
+%environment for flows, appears on index
 \newenvironment{flow}[2][]
 { \ignorespaces \par
 	\noindent
@@ -163,6 +166,50 @@ version={4.0},
 	\end{tightcenter}
 	\par
 }
+
+\newenvironment{wotversion}[1][]
+{ \ignorespaces \par
+	\noindent
+	\begin{tightcenter}
+		\begin{tcolorbox}[standard jigsaw, boxsep=0pt,left=0pt,right=0pt, opacityback=0, colframe=\wotcolor!75!\wotcolor, width=\widthratio\linewidth, breakable, title={\centering \ifthenelse{\isempty{#1}}{WoT}{#1}}]
+		\begin{adjustwidth}{5pt}{5pt}
+			\ignorespaces
+		}
+		{
+			\ignorespaces\unskip
+		\end{adjustwidth}
+		\end{tcolorbox}
+	\end{tightcenter}
+	\par
+}
+
+\newenvironment{wosversion}[1][]
+{ \ignorespaces \par
+	\noindent
+	\begin{tightcenter}
+		\begin{tcolorbox}[standard jigsaw, boxsep=0pt,left=0pt,right=0pt, opacityback=0, colframe=\woscolor!75!\woscolor, width=\widthratio\linewidth, breakable, title={\centering \ifthenelse{\isempty{#1}}{WoS}{#1}}]
+		\begin{adjustwidth}{5pt}{5pt}
+			\ignorespaces
+		}
+		{
+			\ignorespaces\unskip
+		\end{adjustwidth}
+		\end{tcolorbox}
+	\end{tightcenter}
+	\par
+}
+
+\newcommand{\dual}[2]{\begin{tabularx}{\linewidth}{XX}
+		{
+			#1
+		}
+		&
+		{
+			#2
+		}
+\end{tabularx}}
+
+\newcommand{\dualtext}[4]{\textcolor{#1}{#2} / \textcolor{#3}{#4}}
 
 \newcommand{\storyref}[2]{\hyperlink{#1}{\textnormal{[#2]}}}
 
