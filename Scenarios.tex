@@ -8,8 +8,8 @@
 \newif\ifpoison
 \poisontrue
 
-\newif\ifrescue
-\rescuefalse
+\newif\ifdream
+\dreamtrue
 
 \newif\ifhouse
 \housetrue
@@ -324,6 +324,7 @@ version={4.0},
 \fi
 	
 	\tableofcontents
+	
 	\part{시간의 박물관(Museum of Time)}
 		\input{./Scenarios/MoT.tex}
 	\label{endof_MoT}
@@ -346,11 +347,11 @@ version={4.0},
 	\fi
 	\label{endof_Poison}
 	
-	\ifrescue
-	\part{이야기꾼의 세계 캠페인}
-	\input{./Scenarios/Rescue.tex}
+	\ifdream
+	\part{안녕히, 그리고 이번 생은 고마웠어요.}
+		\input{./Scenarios/Dream.tex}
 	\fi
-	\label{endof_Rescue}
+	\label{endof_Dream}
 	
 	\ifhouse
 	\part{공포의 저택}

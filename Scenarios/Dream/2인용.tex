@@ -1,0 +1,41 @@
+\documentclass{report}
+
+\begin{document}
+	일반적인 방법으로, NPC를 시스템과 이야기꾼이 아닌 이가 할 수도 있습니다. 하지만 이 시나리오의 경우, 시스템이 보다 바쁘겠으나, 두 명의 이야기꾼이 평행하게, 서로의 선택을 보지 못한 채로 진행하게 할 수 있습니다. 한 명이 낮을 진행하는 동안, 다른 쪽은 밤을 진행하는 식이죠. 만약 이렇게 할 경우, 악몽 괴물의 정체는 본인이 아닌 상대 이야기꾼\footnote{정확히는, 상대 이야기꾼의 이야기를 반대로 가진 악몽 괴물}이 됩니다\footnote{마지막 밤에 보여지는 형체 역시 본인이 아닌 상대 이야기꾼이 됩니다.}.
+	
+	두 이야기꾼의 장면 진행은 한 이야기꾼이 다른 이야기꾼보다 미뤄진 채로 시작합니다. 하지만 장면 전환으로 인해 들리는 소리는 유지됩니다. 대신, 늦게 시작한 이야기꾼이 마지막 낮에서 마지막 밤으로 전환될 때에는 심장 부위에서 날카로운 통증이 느껴집니다.\footnote{심장 제세동기와 흉부압박으로 인한 통증입니다.}. 즉, 다음과 같이 진행됩니다:
+	
+	\begin{tightcenter}
+		\begin{tabular}{!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}!{\color{black}\vrule}l!{\color{black}\vrule}}
+			\hline
+			첫 번째 이야기꾼         & 두 번째 이야기꾼         & \makecell[c]{장면 전환} \\\hline\hline
+			첫 번째 낮(도입)         & \textcolor{gray}{(대기)} & ``삐" 소리 7회 미만 \\\hline
+			첫 번째 밤(도입)         & 첫 번째 낮(도입)         & ``삐" 소리 6회 미만 \\\hline
+			두 번째 낮               & 첫 번째 밤(도입)         & ``삐" 소리 5회 \\\hline
+			두 번째 밤               & 두 번째 낮               & ``삐" 소리 4회 \\\hline
+			세 번째 낮               & 두 번째 밤               & ``삐" 소리 3회 \\\hline
+			세 번째 밤               & 세 번째 낮               & ``삐" 소리 2회 \\\hline
+			마지막 낮                & 세 번째 밤               & ``삐" 소리 1회 \\\hline
+			마지막 밤                & 마지막 낮                & \makecell[l]{두 번째 이야기꾼 \\ 심장에서 날카로운 통증 느껴짐} \\\hline
+			\textcolor{gray}{(대기)} & 마지막 밤                & 분기 \hyperlink{dream-limbo}{``연옥"} 발동 \\\hline
+		\end{tabular}
+	\end{tightcenter}
+	
+	이 진행 방식을 따를 경우, 분기에 관련된 내용이 조금 수정됩니다.
+	
+	\begin{itemize}
+		\item 두 이야기꾼이 낮과 밤에서 동시에 분기를 충족시킨 경우, 아래와 같이 처리합니다:
+		\begin{tightcenter}
+			\begin{tabular}{!{\color{black}\vrule}c!{\color{black}\vrule}!{\color{black}\vrule}c!{\color{black}\vrule}c!{\color{black}\vrule}}
+				\hline
+				& \hyperlink{dream-sacrifice}{희생}             & \hyperlink{dream-corruption}{공멸} \\\hline\hline
+				\hyperlink{dream-fight}{대항} & 아래를 따릅니다.     & \hyperlink{dream-corruption}{공멸}을 따릅니다. \\\hline
+				\hyperlink{dream-limbo}{연옥} & \hyperlink{dream-sacrifice}{희생}을 따릅니다. & \hyperlink{dream-corruption}{공멸}을 따릅니다. \\\hline
+			\end{tabular}
+		\end{tightcenter}
+		\begin{itemize}
+			\item \hyperlink{dream-sacrifice}{희생}-\hyperlink{dream-fight}{대항}의 경우, \hyperlink{dream-sacrifice}{희생} 분기에 도달한 낮의 이야기꾼이 앞서 한번이라도 \hyperlink{dream-corruption}{공멸} 판정에 실패한 후 \hyperlink{dream-sacrifice}{희생} 판정에 성공한것이라면 \hyperlink{dream-sacrifice}{희생}을, 그 이외의 경우 \hyperlink{dream-corruption}{공멸}을 따릅니다.
+		\end{itemize}
+		\item 각자의 마지막 밤에 첫 번째 이야기꾼이 \hyperlink{dream-limbo}{연옥} 분기를 맞이하고, 두 번째 이야기꾼이 \hyperlink{dream-fight}{대항} 분기를 맞이한 경우, \hyperlink{dream-fight}{대항} 분기를 따릅니다.
+	\end{itemize}
+\end{document}
