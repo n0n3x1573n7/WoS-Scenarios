@@ -301,7 +301,7 @@
 			\flavour{이야기꾼은 시스템을 속여, 이야기를 오염시켰습니다.}
 		\end{story}
 		
-		그렇지 않은 경우, 나머지 이야기꾼들은 아래 나열된 자신의 역할 이야기 중 한가지를 획득합니다. 단, 이야기 옆에 적힌 대로 이야기의 내용이 변형됩니다. 일등 공신인 성가대원의 경우, 두 가지를 선택할 수 있습니다.
+		그렇지 않은 경우, 나머지 이야기꾼들은 아래 나열된 자신의 역할 이야기 중 한가지를 획득합니다. 단, 이야기 옆에 적힌 대로 이야기의 내용이 변형됩니다. 성가대원의 경우, 노래 두 개를 선택할 수 있습니다.
 		
 		\begin{enumerate}
 			\item 성가대원
@@ -316,16 +316,21 @@
 				\begin{itemize}
 					\item \storyref{quest:paladin}{성기사}: 스탯 증가만 적용됩니다. 이는 클리어된 퀘스트의 증가량을 포함합니다.
 					\item \storyref{paladin:smite}{신성한 일격}: 같은 구역의 대상만 지정할 수 있습니다.
-					\item \storyref{paladin:protect}{권능의 보호막}: 한 씬에 한 번만 사용할 수 있습니다. 단, 방패 없이도 사용할 수 있으며, 무제한으로 유지됩니다.
+					\item \storyref{paladin:protect}{권능의 보호막}: 방패 없이도 사용할 수 있으며, 무제한으로 유지되며, 원할 때 회수할 수 있지만, 설치 전 이동을 포함한 모든 행동이 불가하고, 회수한 이후에야 다시 설치할 수 있습니다.
 				\end{itemize}
 			\item 이단심판관
 				\begin{itemize}
 					\item \storyref{rogue:judgment}{심판}: 한 씬에 한 번, 원할 때 사용할 수 있지만, 3라운드 동안만 유지됩니다.
 					\item \storyref{rogue:protect-secret}{쇠약의 독}: 퀘스트를 완료했을 때에만 획득할 수 있습니다. 한 씬에 한 번, 원할 때 사용할 수 있지만, 5라운드 동안만 유지됩니다.
-					\item \storyref{rogue:ultimate-secret}{이단의 심판}: 퀘스트를 완료했을 때에만 획득할 수 있습니다. 한 씬에 한 번, 원할 때 사용할 수 있지만, 3라운드 동안만 유지됩니다.
+					\item \storyref{rogue:ultimate-secret}{이단의 심판}: 퀘스트를 완료했을 때에만 획득할 수 있습니다. 한 씬에 한 번, 원할 때 사용할 수 있지만, 5라운드 동안만 유지됩니다.
 					\item \storyref{rogue:dagger}{단도 투척}: 단도를 마법으로 이루어져 무제한으로 생성할 수 있는 것으로 취급하지만, 대상은 떨어진 구역당 회피에 +1을 받습니다.
-					\item \storyref{rogue:lockpick}{자물쇠 따기}: 변화 없이 획득할 수 있습니다.
+					\item \storyref{rogue:lockpick}{자물쇠 따기}: 변화 없이 획득할 수 있으며, 이후 시스템과 협의하여 훈련 등을 통해 소요 시간을 감소시킬 수 있습니다.
 				\end{itemize}
+			\item 사제(흑막 거부시에만 해당)
+			\begin{itemize}
+				\item \storyref{cleric:prayer}{기도}: \storyref{cleric:desperate-prayer}{절박한 기도} 상태로 획득하되, 회복량과 피해량이 1으로 감소합니다.
+				\item \storyref{cleric:secret-worship}{비밀 숭배}: 퀘스트를 \emph{실패했을 시}에만 획득할 수 있습니다. \storyref{cleric:desperate-prayer}{절박한 기도} 상태로 획득하되, 회복량과 피해량이 1으로 감소하며, 이에 더불어 절박한 기도를 자신이 아닌 대상에 사용할 시 자신의 개연성을 1 회복합니다.
+			\end{itemize}
 		\end{enumerate}
 	
 \end{document}
